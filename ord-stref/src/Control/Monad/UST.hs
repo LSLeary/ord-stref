@@ -30,9 +30,11 @@ toBase :: ST s a -> Base.ST s a
 toBase = runUGenT . unU
 
 -- | Generate a new symbol, unique within the thread.
+--
 --   prop> runST $ (/=) <$> newUnique <*> newUnique
 --
 --   Does not violate purity:
+--
 --   prop> runST newUnique == runST newUnique
 newUnique :: ST s Unique
 newUnique = U genUnique

@@ -1,8 +1,11 @@
 cabal-version:       >=1.10
 name:                ord-stref
 version:             0.1.0.0
-synopsis:            Wraps STRef and ST, extending their respective interfaces with Ord and (relatedly) per-thread unique symbol generation.
--- description:
+synopsis:            Orderable STRefs and unique symbol generation in ST.
+description:         Wraps @STRef@ and @ST@, extending their respective
+                     interfaces with @Ord@ and (relatedly) per-thread USG. Also
+                     provided is the USG Monad transformer @UGenT@ with which
+                     the extension to @ST@ is implemented.
 homepage:            https://github.com/LSLeary/ord-stref
 bug-reports:         https://github.com/LSLeary/ord-stref/issues
 license:             BSD3

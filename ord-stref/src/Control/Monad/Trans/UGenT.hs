@@ -34,9 +34,11 @@ newtype Unique = Unique Integer
   deriving (Eq, Ord)
 
 -- | Generate a new symbol, unique within the current monadic computation.
+--
 --   prop> runUGen $ (/=) <$> genUnique <*> genUnique
 --
 --   The symbol generation is pure:
+--
 --   prop> runUGen genUnique == runUGen genUnique
 genUnique :: Monad m => UGenT m Unique
 genUnique = UGenT (modify' bump *> get)
