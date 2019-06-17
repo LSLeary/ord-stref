@@ -1,4 +1,4 @@
-{-# LANGUAGE GeneralisedNewtypeDeriving, RankNTypes #-}
+{-# LANGUAGE GeneralizedNewtypeDeriving, RankNTypes #-}
 
 module Control.Monad.UST
   ( ST, runST

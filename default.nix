@@ -1,9 +1,8 @@
-{ pkgs ? import <nixpkgs> {}, compiler ? "ghc863" }:
+{ pkgs     ? import ./nixpkgs.nix {}
+, compiler ? "ghc865"
+}:
 
-let
-  # hlib = pkgs.haskell.lib;
-  hpkg = pkgs.haskell.packages."${compiler}";
-in
+let hpkg = pkgs.haskell.packages."${compiler}"; in
 
 hpkg.developPackage {
   root = ./ord-stref;

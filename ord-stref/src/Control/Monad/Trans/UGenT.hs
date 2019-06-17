@@ -1,4 +1,4 @@
-{-# LANGUAGE GeneralisedNewtypeDeriving #-}
+{-# LANGUAGE GeneralizedNewtypeDeriving #-}
 
 module Control.Monad.Trans.UGenT
   ( UGenT(UGenT), runUGenT
