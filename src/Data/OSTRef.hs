@@ -1,4 +1,3 @@
-
 module Data.OSTRef
   ( STRef, newSTRef
   , readSTRef, writeSTRef
