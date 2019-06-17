@@ -9,11 +9,8 @@ import Control.Monad.Trans.UGenT (Unique)
 import Control.Monad.UST (ST, newUnique, fromBase)
 import Data.Ord (comparing)
 
-data STRef s a = O { refID :: Unique, ref :: Base.STRef s a }
-  deriving Eq
-
-instance Ord (STRef s a) where
-  compare = comparing refID
+data STRef s a = O { refID :: Unique, ref :: Base.STRef s a } deriving Eq
+instance Ord (STRef s a) where compare = comparing refID
 
 newSTRef :: a -> ST s (STRef s a)
 newSTRef a = O <$> newUnique <*> fromBase (Base.newSTRef a)
