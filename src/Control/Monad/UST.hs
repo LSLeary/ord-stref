@@ -29,7 +29,7 @@ fromBase = U . lift
 toBase :: ST s a -> Base.ST s a
 toBase = runUGenT . unU
 
--- | Generate a new symbol unique to the thread.
+-- | Generate a new symbol, unique within the thread.
 --   prop> runST $ (/=) <$> newUnique <*> newUnique
 --
 --   Does not violate purity:
