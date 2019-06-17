@@ -22,5 +22,5 @@ newtype Unique = Unique Integer
   deriving (Eq, Ord)
 
 genUnique :: Monad m => UGenT m Unique
-genUnique = UGenT (modify bump *> get)
+genUnique = UGenT (modify' bump *> get)
   where bump (Unique i) = Unique (i + 1)
