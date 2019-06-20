@@ -1,7 +1,7 @@
 {-# LANGUAGE GeneralizedNewtypeDeriving #-}
 
 module Control.Monad.Trans.UGenT
-  ( UGenT(UGenT), runUGenT
+  ( UGenT, runUGenT
   , UGen, runUGen
   , Unique, genUnique
   ) where
